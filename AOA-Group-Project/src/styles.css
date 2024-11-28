@@ -1,0 +1,62 @@
+/* src/styles.css */
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 1rem;
+  }
+  
+  .file-manager {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .file-manager-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  .breadcrumb-item {
+    display: inline;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.25rem;
+  }
+  
+  .file-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .file-list-header {
+    font-weight: bold;
+    color: #374151;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .file-list-item {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  

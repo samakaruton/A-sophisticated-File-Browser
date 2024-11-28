@@ -1,0 +1,279 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-Screen Container */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents unwanted scroll */
+}
+
+/* Side Menu Styling */
+.side-menu {
+  width: 400px;
+  background-color: #1f2937; /* Dark gray background */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Full height of viewport */
+  overflow-y: auto;
+}
+
+.side-menu h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #60a5fa; /* Blue color */
+}
+
+.side-menu-item {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.side-menu-item:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.side-menu-item:active {
+  background-color: #1d4ed8;
+  transform: scale(0.95);
+}
+
+/* Main Content Wrapper */
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Ribbon Styling */
+.ribbon {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1f2937;
+  color: white;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.ribbon-button {
+  display: flex;
+  align-items: center;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.ribbon-button:hover {
+  background-color: #2563eb;
+}
+
+.ribbon-button span {
+  margin-left: 5px;
+}
+
+.ribbon-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #3b82f6;
+  border-radius: 6px;
+  padding: 5px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #2563eb;
+}
+
+/* Content Area Styling */
+.content {
+  border: solid black;
+  flex-grow: 1;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Ensure .content takes all available space in main container */
+  height: 100%;
+  overflow-y: hidden; /* Hide scrollbars if not needed */
+  margin: 0;
+  padding: 0;
+}
+
+/* File Manager Styling */
+.file-manager {
+  border: solid black;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  height: 100%; /* Fill available height of .content */
+}
+
+
+.file-manager-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.file-list-header {
+  font-weight: bold;
+  color: #4b5563;
+  text-align: left;
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  color: #6b7280;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* File List Styling */
+.file-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  font-size: 1.2rem;
+}
+
+.file-name {
+  background: none;
+  border: none;
+  color: #1f2937; /* Dark gray */
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.file-name:hover {
+  color: #2563eb; /* Blue on hover */
+}
+
+.file-table {
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensure the table uses the full width of the parent */
+  margin-top: 20px;
+}
+
+.file-table th, .file-table td {
+  padding: 15px; /* Increased padding for more spacing */
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.file-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.file-table tr:hover {
+  background-color: #c5def1; /* Highlight on hover */
+}
+
+.file-table .highlighted {
+  background-color: #c5def1; /* Blue background for highlighted files */
+  color: #1d97b9;
+}
+
+.file-table td {
+  word-wrap: break-word;
+}
+
+.file-table .file-icon {
+  width: 60px; /* Fixed width for the icon column */
+  text-align: center;
+}
+
+.file-table .file-name {
+  width: 40%; /* Make the file name column take up 40% of the table width */
+}
+
+.file-table .file-size {
+  width: 20%; /* Set size column width to 20% */
+  text-align: right;
+}
+
+.file-table .file-description {
+  width: 40%; /* Set description column width to 40% */
+  text-align: left;
+}
+
+.file-table th, .file-table td {
+  min-width: 150px; /* Ensure each column has a minimum width */
+}
+
+
